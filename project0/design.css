@@ -1,0 +1,119 @@
+body {
+  margin: 20px;
+  border: 20px solid #ddd6d6;
+  border-style: double blue;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+  color: orange;
+}
+
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+  padding: 30px;
+  margin-left: 70px;
+}
+
+.flex-box div {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+}
+
+.container {
+  background-color: blue;
+  padding: 10px;
+  margin: auto;
+}
+
+.container div {
+  border: 2px solid black;
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.grid {
+  background-color: green;
+  display: -ms-grid;
+  display: grid;
+  padding: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+.grid div {
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+p::-moz-selection {
+  background-color: pink;
+  color: blue;
+}
+
+p::selection {
+  background-color: pink;
+  color: blue;
+}
+
+h3 + p {
+  text-align: justify;
+  border-left: 5px solid #d498ac;
+  margin-left: 60px;
+  padding: 20px;
+  text-indent: 40px;
+}
+
+a::before {
+  content: "[Click me ==>  ]   ";
+}
+
+@media print {
+  .flex-box {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  body {
+    background-color: white;
+  }
+}
+
+@media (max-width: 499px) {
+  body {
+    background-color: #f8f878;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+h3 {
+  padding-left: 40px;
+}
+/*# sourceMappingURL=design.css.map */
