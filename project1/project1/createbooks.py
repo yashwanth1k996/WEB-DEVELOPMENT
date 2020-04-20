@@ -1,4 +1,5 @@
 import os
+import csv
 from flask import request
 from flask import render_template
 from flask import Flask, session
@@ -18,6 +19,13 @@ db.init_app(app)
 def main():
     # print("Creating tables")
     db.create_all()
+    file = open("books.csv")
+    r = csv.reader(file)
+    print("here")
+    for str1 in r:
+        details = Books(isbn=str1[0], title=str1[1], author=str1[2], year=int(str1[3]))
+        db.session.add(details)
+        db.session.commit()
 
 if __name__ == "__main__":
     with app.app_context():

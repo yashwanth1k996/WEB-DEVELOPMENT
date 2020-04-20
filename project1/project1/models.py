@@ -16,7 +16,7 @@ class User(db.Model):
 
 class Books(db.Model):
     __tablename__ = "books"
-    isbn = db.Column(db.Integer, primary_key = True)
+    isbn = db.Column(db.String, primary_key = True)
     title = db.Column(db.String, nullable = False)
     author=db.Column(db.String, nullable = False)
     year = db.Column(db.Integer, nullable = False)
